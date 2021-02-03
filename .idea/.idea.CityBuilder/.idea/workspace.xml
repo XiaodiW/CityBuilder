@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4286c14d-7833-4be6-8f19-ea6cb4d035fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ISelectable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ISelectable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Wall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +20,16 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/AutoSaver/Editor/AutoSaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FDDAEB0F-ECAB-444C-B7CD-B3CE9F53FEAD/2b/1eecc9a8/PlayModeStateChange.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/Wall.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FDDAEB0F-ECAB-444C-B7CD-B3CE9F53FEAD/11/cbdd7701/EditorApplication.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Plugins/AutoSaver/Editor/AutoSaver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MouseClick.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ISelectable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Wall.cs" />
     </changedPaths>
   </component>
@@ -73,8 +74,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612365171139</updated>
-      <workItem from="1612365207674" duration="5000000" />
+      <workItem from="1612365207674" duration="8283000" />
     </task>
+    <task id="LOCAL-00001" summary="Add AutoSaver, Implement wall color changed IPointClick">
+      <created>1612378226939</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612378226939</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -92,5 +101,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Add AutoSaver, Implement wall color changed IPointClick" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add AutoSaver, Implement wall color changed IPointClick" />
   </component>
 </project>

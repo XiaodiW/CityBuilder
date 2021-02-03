@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Wall : MonoBehaviour, IPointerClickHandler
+public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IDragHandler
 {
-    int index;
-
-    private SpriteRenderer _spriteRenderer;
+    private SpriteRenderer spriteRenderer;
+    private GameManager gameManager;
  
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -16,21 +14,20 @@ public class Wall : MonoBehaviour, IPointerClickHandler
 
     void Start()
     {
-        index = 0;
-        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        gameManager = FindObjectOfType<GameManager>();
     }
  
-    void ChangeColor()
-    {
-        if (index == 0)
-        {
-            _spriteRenderer.color = Color.black;
-        }
-        else
-        {
-            _spriteRenderer.color = Color.gray;
-        }
-           
-        index = index == 0 ? 1 : 0;
+    void ChangeColor() {
+        gameManager.Selected = GetComponent<IMySelectable>();
+        spriteRenderer.color = Color.black;
+    }
+    
+    public void OnUnSelected() {
+        spriteRenderer.color = Color.gray;
+    }
+
+    public void OnDrag(PointerEventData eventData) {
+        spriteRenderer.transform.position = Input.mousePosition;
     }
 }
