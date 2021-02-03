@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4286c14d-7833-4be6-8f19-ea6cb4d035fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ISelectable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ISelectable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IMyDrapable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IMyDrapable.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ISelectable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IMySelectable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ISelectable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IMySelectable.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Wall.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +33,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MouseClick.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ISelectable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/IMyDrapable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Wall.cs" />
     </changedPaths>
   </component>
@@ -41,6 +45,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3496708" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -56,10 +62,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="54577">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="54577" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -74,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612365171139</updated>
-      <workItem from="1612365207674" duration="8283000" />
+      <workItem from="1612365207674" duration="14476000" />
     </task>
     <task id="LOCAL-00001" summary="Add AutoSaver, Implement wall color changed IPointClick">
       <created>1612378226939</created>
@@ -83,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612378226939</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implement Click and unSelect function">
+      <created>1612381462641</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612381462642</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -102,6 +115,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Add AutoSaver, Implement wall color changed IPointClick" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add AutoSaver, Implement wall color changed IPointClick" />
+    <MESSAGE value="Implement Click and unSelect function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Click and unSelect function" />
   </component>
 </project>

@@ -1,4 +1,4 @@
 
     public interface IMySelectable {
-        void OnUnSelected();
+        void RemoveSelect();
     }
