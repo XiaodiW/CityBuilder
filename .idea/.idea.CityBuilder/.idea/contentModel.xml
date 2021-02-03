@@ -15,7 +15,6 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="GameManager.cs" t="Include" />
-          <e p="IMyDrapable.cs" t="Include" />
           <e p="IMySelectable.cs" t="Include" />
           <e p="Wall.cs" t="Include" />
         </e>
