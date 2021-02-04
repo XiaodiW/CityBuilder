@@ -183,6 +183,12 @@ MonoBehaviour:
   originalParent: {fileID: 0}
   spawanTrigger: {fileID: 1407784891}
   prefab: {fileID: 6188209865615620499, guid: 9f85fe319431b41e1848cd28501937dc, type: 3}
+  colorList:
+  - {fileID: 11400000, guid: 18cd586fafe2a416fa1ae822730c4a14, type: 2}
+  - {fileID: 11400000, guid: d27841271d005426c91c21d7eb3d7018, type: 2}
+  - {fileID: 11400000, guid: ccaf394149a714f6aa7bcafb66e37fec, type: 2}
+  - {fileID: 11400000, guid: 2ac372d2057274f69a140713da2430c5, type: 2}
+  - {fileID: 11400000, guid: 08261f02ebe3c46cabfcbc435aa06264, type: 2}
   canSpawn: 0
 --- !u!1 &115210138
 GameObject:

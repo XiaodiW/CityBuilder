@@ -14,6 +14,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="BlockColors.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="IMySelectable.cs" t="Include" />
           <e p="Wall.cs" t="Include" />

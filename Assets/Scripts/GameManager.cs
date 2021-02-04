@@ -1,8 +1,11 @@
 using System;
+using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.VFX;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour,IPointerClickHandler {
     private IMySelectable selected;
@@ -10,6 +13,7 @@ public class GameManager : MonoBehaviour,IPointerClickHandler {
     private bool isSpawn;
     public Button spawanTrigger;
     public GameObject prefab;
+    public List<BlockColors> colorList;
     private GameObject isoMetricGrid;
     private Text modeText;
     public bool canSpawn;
@@ -43,6 +47,12 @@ public class GameManager : MonoBehaviour,IPointerClickHandler {
                 tempPos.y = (float) Math.Round(tempPos.y);
                 tempPos.z = 0;
                 instance.transform.localPosition = tempPos;
+                SpriteRenderer b =new SpriteRenderer();
+                var tempArr = instance.GetComponentsInChildren<SpriteRenderer>();
+                foreach(var temp in tempArr)
+                    if(temp.transform.parent == instance.transform)
+                        b = temp;
+                b.color = colorList[Random.Range(0, colorList.Count)].color;
             }
         } else { Selected = null; }
     }
