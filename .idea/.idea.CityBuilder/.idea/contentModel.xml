@@ -25,7 +25,7 @@
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp/Bin" t="ExcludeRecursive" />
     </e>
-    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.3/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.3/resharper-host/local/Transient/Rider/v203/SolutionCaches/_CityBuilder.-1405743840.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2021.1/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2021.1/resharper-host/local/Transient/Rider/v211/SolutionCaches/_CityBuilder.-1405743840.00" t="ExcludeRecursive" />
   </component>
 </project>

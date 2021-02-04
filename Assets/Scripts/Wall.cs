@@ -6,23 +6,25 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerEnterHandler,IPointerExitHandler,IDragHandler,IDropHandler,IDroppable,IPointerUpHandler
+public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerEnterHandler
+    ,IPointerExitHandler,IDragHandler,IDropHandler,IDroppable,IPointerUpHandler
 {
-    private SpriteRenderer block;
+    private SpriteRenderer tile;
     private GameManager gameManager;
-    private SpriteRenderer highLight;
+    private SpriteRenderer WallHighLightSprite;
     private Color originalColor;
+    private bool isDragable = false;
 
     private void Start() {
         var tempArr = GetComponentsInChildren<SpriteRenderer>();
         foreach(var temp in tempArr)
             if(temp.gameObject == gameObject)
-                highLight = temp;
+                WallHighLightSprite = temp;
         foreach(var temp in tempArr)
             if(temp.transform.parent == transform)
-                block = temp;
-        highLight.enabled = false;
-        if(block != null) originalColor = block.color;
+                tile = temp;
+        WallHighLightSprite.enabled = false;
+        if(tile != null) originalColor = tile.color;
         gameManager = FindObjectOfType<GameManager>();
     }
 
@@ -30,14 +32,75 @@ public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerE
         ChangeColor(true);
     }
 
+    public void RemoveSelect() {
+        if(tile !=null) ChangeColor(false);
+        isDragable = false;
+    }
+
+    public void OnPointerUp(PointerEventData eventData) {
+        var target = eventData.pointerCurrentRaycast.gameObject;
+        if(tile != null) {
+            var blockTransform = tile.transform;
+            if(target.GetComponent<IDroppable>() == null) blockTransform.parent = transform;
+            blockTransform.localPosition = Vector3.zero;
+            blockTransform.localScale = new Vector3(1, 1, 1);
+        }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData) {
+        WallHighLightSprite.enabled = true;
+        gameManager.targetCanSpawn = false;
+    }
+
+    public void OnPointerExit(PointerEventData eventData) {
+        WallHighLightSprite.enabled = false;
+        gameManager.targetCanSpawn = true;
+    }
+
+    public void OnDrag(PointerEventData eventData) {
+        if(tile != null && isDragable) {
+            gameManager.originalParent = gameObject;
+            tile.transform.parent = null;
+            var v3 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            v3.z = -5f;
+            tile.transform.position = v3;
+            tile.transform.localScale = new Vector3(1.5f, 1.5f, 1);
+        }
+    }
+    
+    public void OnDrop(PointerEventData eventData) {
+        var source = eventData.pointerDrag.gameObject;
+        var wall = source.GetComponent<Wall>();
+        if(wall != null&& wall.isDragable) {
+            var tempBlock = wall.tile;
+            if(wall.tile != null) {
+                if(IsDroppable()) {
+                    tempBlock.transform.parent = transform;
+                    tile = tempBlock;
+                    wall.tile = null;
+                    originalColor = wall.originalColor;
+                    tile.transform.localScale = new Vector3(1, 1, 1); //Set highlight scale to normal.
+                    RemoveSelect(); //Cancel Selected.
+                } else { tempBlock.transform.parent = gameManager.originalParent.transform; }
+                tempBlock.transform.localPosition = Vector3.zero;
+            }
+        }
+    }
+
+    public bool IsDroppable() {
+       return transform.childCount == 0;
+    }
+
+
     private void ChangeColor(bool isHighLight) {
-        if(block == null) {
+        if(tile == null) {
             gameManager.Selected = null;
         } else {
             if(isHighLight) {
                 gameManager.Selected = GetComponent<IMySelectable>();
-                block.color = HighlightColor(block.color);
-            } else { block.color = originalColor; }
+                tile.color = HighlightColor(tile.color);
+                isDragable = true;
+            } else { tile.color = originalColor; }
         }
     }
 
@@ -59,59 +122,5 @@ public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerE
                 break;
         }
         return newColor;
-    }
-
-    public void RemoveSelect() {
-        if(block !=null) ChangeColor(false);
-    }
-
-    public void OnPointerUp(PointerEventData eventData) {
-        var target = eventData.pointerCurrentRaycast.gameObject;
-        if(block != null) {
-            var blockTransform = block.transform;
-            if(target.GetComponent<IDroppable>() == null) blockTransform.parent = transform;
-            blockTransform.localPosition = Vector3.zero;
-        }
-    }
-
-    public void OnPointerEnter(PointerEventData eventData) {
-        highLight.enabled = true;
-        gameManager.canSpawn = false;
-    }
-
-    public void OnPointerExit(PointerEventData eventData) {
-        highLight.enabled = false;
-        gameManager.canSpawn = true;
-    }
-
-    public void OnDrag(PointerEventData eventData) {
-        if(block != null) {
-            gameManager.originalParent = gameObject;
-            block.transform.parent = null;
-            var v3 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            v3.z = -5f;
-            block.transform.position = v3;
-        }
-    }
-
-    public void OnDrop(PointerEventData eventData) {
-        var source = eventData.pointerDrag.gameObject;
-        var wall = source.GetComponent<Wall>();
-        if(wall != null) {
-            var tempBlock = wall.block;
-            if(wall.block != null) {
-                if(IsDroppable()) {
-                    tempBlock.transform.parent = transform;
-                    block = tempBlock;
-                    wall.block = null;
-                    originalColor = wall.originalColor;
-                } else { tempBlock.transform.parent = gameManager.originalParent.transform; }
-                tempBlock.transform.localPosition = Vector3.zero;
-            }
-        }
-    }
-
-    public bool IsDroppable() {
-       return transform.childCount == 0;
     }
 }

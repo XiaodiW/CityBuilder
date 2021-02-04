@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4286c14d-7833-4be6-8f19-ea6cb4d035fc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Wall.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,17 +17,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/AutoSaver/Editor/AutoSaver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FDDAEB0F-ECAB-444C-B7CD-B3CE9F53FEAD/11/cbdd7701/EditorApplication.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FDDAEB0F-ECAB-444C-B7CD-B3CE9F53FEAD/2b/1eecc9a8/PlayModeStateChange.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/Wall.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B8BC167D-E93E-4CD7-ACB3-FCE533DC4CBC/89/bf7d698a/Color.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/Wall.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/Wall.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5458C27C-C6FB-43A8-B421-44DFC5E4C430/ce/b771494b/IPointerUpHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/Wall.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FDDAEB0F-ECAB-444C-B7CD-B3CE9F53FEAD/11/cbdd7701/EditorApplication.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B8BC167D-E93E-4CD7-ACB3-FCE533DC4CBC/89/bf7d698a/Color.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/AutoSaver/Editor/AutoSaver.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -33,9 +31,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ISelectable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/IMyDrapable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ClickToInstance.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Wall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ColorBlock.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BlockColors.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Wall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
     </changedPaths>
   </component>
@@ -58,16 +56,30 @@
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
+      <option name="opaque">
+        <Object />
+      </option>
       <option name="pid" />
+      <option name="plain">
+        <Object />
+      </option>
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1313">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="1313" />
+      <option name="opaque">
+        <Object />
+      </option>
+      <option name="pid" />
+      <option name="plain">
+        <Object />
+      </option>
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -82,7 +94,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612365171139</updated>
-      <workItem from="1612365207674" duration="39369000" />
+      <workItem from="1612365207674" duration="39803000" />
+      <workItem from="1612448010547" duration="2888000" />
     </task>
     <task id="LOCAL-00001" summary="Add AutoSaver, Implement wall color changed IPointClick">
       <created>1612378226939</created>
@@ -147,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612445938688</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Polish">
+      <created>1612447466674</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612447466674</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -162,6 +182,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -171,9 +192,9 @@
     <MESSAGE value="Add Drag and drop" />
     <MESSAGE value="Implement Drag and drop fix bugs" />
     <MESSAGE value="Fix Highligh Color Function" />
-    <MESSAGE value="Polish" />
     <MESSAGE value="Add spawn Function" />
     <MESSAGE value="Add spawn Radom Colors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add spawn Radom Colors" />
+    <MESSAGE value="Polish" />
+    <option name="LAST_COMMIT_MESSAGE" value="Polish" />
   </component>
 </project>

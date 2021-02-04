@@ -8,37 +8,37 @@ using UnityEngine.VFX;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour,IPointerClickHandler {
-    private IMySelectable selected;
+    private IMySelectable selectedWall;
     [HideInInspector]public GameObject originalParent;
-    private bool isSpawn;
-    public Button spawanTrigger;
+    private bool isSpawnOn;
+    public Button modeButton;
     public GameObject prefab;
-    public List<BlockColors> colorList;
+    public List<BlockColors> PresetColors;
     private GameObject isoMetricGrid;
-    private Text modeText;
-    public bool canSpawn;
+    private Text modeButtonText;
+    [HideInInspector] public bool targetCanSpawn;
 
     private void Start() {
         isoMetricGrid = GameObject.Find("IsoMetricGrid");
-        modeText = spawanTrigger.GetComponentInChildren<Text>();
-        modeText.text = isSpawn ? "Spawn Mode" : "Normal Mode";
+        modeButtonText = modeButton.GetComponentInChildren<Text>();
+        modeButtonText.text = isSpawnOn ? "Spawn Mode" : "Normal Mode";
     }
 
     public IMySelectable Selected {
         set {
-            selected?.RemoveSelect();
-            selected = value;
+            selectedWall?.RemoveSelect();
+            selectedWall = value;
         } 
     }
 
     public void SpawnTrigger() {
-        isSpawn = !isSpawn;
-        modeText.text = isSpawn ? "Spawn Mode" : "Normal Mode";
+        isSpawnOn = !isSpawnOn;
+        modeButtonText.text = isSpawnOn ? "Spawn Mode" : "Normal Mode";
     }
 
     public void OnPointerClick(PointerEventData eventData) {
-        if(isSpawn) {
-            if(canSpawn) DoSpawn(eventData);
+        if(isSpawnOn) {
+            if(targetCanSpawn) DoSpawn(eventData);
         } else { Selected = null; }
     }
     
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour,IPointerClickHandler {
         foreach(var temp in tempArr)
             if(temp.transform.parent == instance.transform)
                 b = temp;
-        var colorSelected = colorList[Random.Range(0, colorList.Count)];
+        var colorSelected = PresetColors[Random.Range(0, PresetColors.Count)];
         b.color = colorSelected.color;
         b.gameObject.name = colorSelected.name;
     }
