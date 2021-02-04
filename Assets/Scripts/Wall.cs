@@ -27,23 +27,25 @@ public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerE
     }
 
     public void OnPointerClick(PointerEventData eventData) {
-        if(block != null) ChangeColor(true);
+        ChangeColor(true);
     }
 
     private void ChangeColor(bool isHighLight) {
-        if(isHighLight) {
-            gameManager.Selected = GetComponent<IMySelectable>();
-            block.color = HighlightColor(block.color);
-        } else { block.color = originalColor; }
+        if(block == null) {
+            gameManager.Selected = null;
+        } else {
+            if(isHighLight) {
+                gameManager.Selected = GetComponent<IMySelectable>();
+                block.color = HighlightColor(block.color);
+            } else { block.color = originalColor; }
+        }
     }
 
     private static Color HighlightColor(Color color) {
         var newColor = color;
-        var colorDic = new Dictionary<string, float>();
-        colorDic.Add("r", newColor.r);
-        colorDic.Add("g", newColor.g);
-        colorDic.Add("b", newColor.b);
-        colorDic.Add("a", newColor.a);
+        var colorDic =
+            new Dictionary<string, float> {{"r", newColor.r}, {"g", newColor.g}, 
+                {"b", newColor.b}, {"a", newColor.a}};
         var i = colorDic.Take(3).OrderBy(a => a.Value).Last().Key;
         switch(i) {
             case "r":
