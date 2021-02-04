@@ -38,22 +38,26 @@ public class GameManager : MonoBehaviour,IPointerClickHandler {
 
     public void OnPointerClick(PointerEventData eventData) {
         if(isSpawn) {
-            if(canSpawn) {
-                var mousePosition = eventData.pointerCurrentRaycast.worldPosition;
-                var instance = Instantiate(prefab, isoMetricGrid.transform);
-                instance.transform.position = mousePosition;
-                var tempPos = instance.transform.localPosition;
-                tempPos.x = (float) Math.Round(tempPos.x);
-                tempPos.y = (float) Math.Round(tempPos.y);
-                tempPos.z = 0;
-                instance.transform.localPosition = tempPos;
-                SpriteRenderer b =new SpriteRenderer();
-                var tempArr = instance.GetComponentsInChildren<SpriteRenderer>();
-                foreach(var temp in tempArr)
-                    if(temp.transform.parent == instance.transform)
-                        b = temp;
-                b.color = colorList[Random.Range(0, colorList.Count)].color;
-            }
+            if(canSpawn) DoSpawn(eventData);
         } else { Selected = null; }
+    }
+    
+    void DoSpawn(PointerEventData pointerEventData) {
+        var mousePosition = pointerEventData.pointerCurrentRaycast.worldPosition;
+        var instance = Instantiate(prefab, isoMetricGrid.transform);
+        instance.transform.position = mousePosition;
+        var tempPos = instance.transform.localPosition;
+        tempPos.x = (float) Math.Round(tempPos.x);
+        tempPos.y = (float) Math.Round(tempPos.y);
+        tempPos.z = 0;
+        instance.transform.localPosition = tempPos;
+        SpriteRenderer b = new SpriteRenderer();
+        var tempArr = instance.GetComponentsInChildren<SpriteRenderer>();
+        foreach(var temp in tempArr)
+            if(temp.transform.parent == instance.transform)
+                b = temp;
+        var colorSelected = colorList[Random.Range(0, colorList.Count)];
+        b.color = colorSelected.color;
+        b.gameObject.name = colorSelected.name;
     }
 }
