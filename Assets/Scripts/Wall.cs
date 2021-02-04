@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.Mathematics;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -58,44 +56,39 @@ public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerE
     }
 
     public void OnDrag(PointerEventData eventData) {
-        if(tile != null && isDragable) {
-            gameManager.originalParent = gameObject; //Save the original parent in GameManager
-            tile.transform.parent = null; //Put the dragged tile to root
-            var v3 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            v3.z = -5f; //Set the dragged tile a bit close to camera.
-            tile.transform.position = v3;
-            tile.transform.localScale = new Vector3(1.5f, 1.5f, 1); //Enlarge tile during Dragging;
-        }
+        if(tile == null || !isDragable) return;
+        var tileTrans = tile.transform;
+        gameManager.originalParent = gameObject; //Save the original parent in GameManager
+        tileTrans.parent = null; //Put the dragged tile to root
+        var v3 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        v3.z = -0.2f; //Set the dragged tile a bit close to camera.
+        tileTrans.position = v3;
+        tileTrans.localScale = new Vector3(1.5f, 1.5f, 1); //Enlarge tile during Dragging;
     }
     
     public void OnDrop(PointerEventData eventData) {
         var source = eventData.pointerDrag.gameObject;
         var wall = source.GetComponent<Wall>();
-        if(wall != null&& wall.isDragable) {
-            var tempBlock = wall.tile;
-            if(wall.tile != null) {
-                if(IsDroppable()) {
-                    tempBlock.transform.parent = transform;
-                    tile = tempBlock;
-                    wall.tile = null;
-                    originalTileColor = wall.originalTileColor;
-                    tile.transform.localScale = new Vector3(1, 1, 1); //Set highlight scale to normal.
-                    RemoveSelect(); //Cancel Selected.
-                } else { tempBlock.transform.parent = gameManager.originalParent.transform; }
-                tempBlock.transform.localPosition = Vector3.zero;
-            }
-        }
+        if(wall == null || !wall.isDragable) return;
+        var transferTile = wall.tile;
+        if(transferTile == null) return;
+        if(IsDroppable()) {
+            transferTile.transform.parent = transform; //Put the transferred Tile as child of this.
+            tile = transferTile; //Set this.tile with transferred tile.
+            if(source != gameObject) wall.tile = null; //Remove previous tile from previous Wall. (** If transferred to itself**)
+            originalTileColor = wall.originalTileColor; //Set tiles Original Color.
+            tile.transform.localScale = new Vector3(1, 1, 1); //Set highlight scale to normal.
+            RemoveSelect(); //Cancel Selected.
+        } else { transferTile.transform.parent = gameManager.originalParent.transform; } //Send the Tile back to original wall
+        transferTile.transform.localPosition = Vector3.zero; // LocalPosition should be Vector3.Zero.
     }
 
     public bool IsDroppable() {
        return transform.childCount == 0;
     }
 
-
     private void ChangeColor(bool isHighLight) {
-        if(tile == null) {
-            gameManager.Selected = null;
-        } else {
+        if(tile == null) { gameManager.Selected = null; } else {
             if(isHighLight) {
                 gameManager.Selected = GetComponent<IMySelectable>();
                 tile.color = HighlightColor(tile.color);
