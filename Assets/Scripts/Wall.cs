@@ -76,18 +76,22 @@ public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerE
 
     public void OnPointerEnter(PointerEventData eventData) {
         highLight.enabled = true;
+        gameManager.canSpawn = false;
     }
 
     public void OnPointerExit(PointerEventData eventData) {
         highLight.enabled = false;
+        gameManager.canSpawn = true;
     }
 
     public void OnDrag(PointerEventData eventData) {
-        gameManager.originalParent = gameObject;
-        block.transform.parent = null;
-        var v3 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        v3.z = -5f;
-        block.transform.position = v3;
+        if(block != null) {
+            gameManager.originalParent = gameObject;
+            block.transform.parent = null;
+            var v3 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            v3.z = -5f;
+            block.transform.position = v3;
+        }
     }
 
     public void OnDrop(PointerEventData eventData) {
@@ -95,13 +99,15 @@ public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerE
         var wall = source.GetComponent<Wall>();
         if(wall != null) {
             var tempBlock = wall.block;
-            if(IsDroppable()) {
-                tempBlock.transform.parent = transform;
-                block = tempBlock;
-                wall.block = null;
-                this.originalColor = wall.originalColor;
-            } else { tempBlock.transform.parent = gameManager.originalParent.transform; }
-            tempBlock.transform.localPosition = Vector3.zero;
+            if(wall.block != null) {
+                if(IsDroppable()) {
+                    tempBlock.transform.parent = transform;
+                    block = tempBlock;
+                    wall.block = null;
+                    originalColor = wall.originalColor;
+                } else { tempBlock.transform.parent = gameManager.originalParent.transform; }
+                tempBlock.transform.localPosition = Vector3.zero;
+            }
         }
     }
 
