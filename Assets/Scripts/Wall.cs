@@ -12,7 +12,7 @@ public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerE
     private SpriteRenderer tile;
     private GameManager gameManager;
     private SpriteRenderer WallHighLightSprite;
-    private Color originalColor;
+    private Color originalTileColor;
     private bool isDragable = false;
 
     private void Start() {
@@ -24,7 +24,7 @@ public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerE
             if(temp.transform.parent == transform)
                 tile = temp;
         WallHighLightSprite.enabled = false;
-        if(tile != null) originalColor = tile.color;
+        if(tile != null) originalTileColor = tile.color;
         gameManager = FindObjectOfType<GameManager>();
     }
 
@@ -59,12 +59,12 @@ public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerE
 
     public void OnDrag(PointerEventData eventData) {
         if(tile != null && isDragable) {
-            gameManager.originalParent = gameObject;
-            tile.transform.parent = null;
+            gameManager.originalParent = gameObject; //Save the original parent in GameManager
+            tile.transform.parent = null; //Put the dragged tile to root
             var v3 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            v3.z = -5f;
+            v3.z = -5f; //Set the dragged tile a bit close to camera.
             tile.transform.position = v3;
-            tile.transform.localScale = new Vector3(1.5f, 1.5f, 1);
+            tile.transform.localScale = new Vector3(1.5f, 1.5f, 1); //Enlarge tile during Dragging;
         }
     }
     
@@ -78,7 +78,7 @@ public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerE
                     tempBlock.transform.parent = transform;
                     tile = tempBlock;
                     wall.tile = null;
-                    originalColor = wall.originalColor;
+                    originalTileColor = wall.originalTileColor;
                     tile.transform.localScale = new Vector3(1, 1, 1); //Set highlight scale to normal.
                     RemoveSelect(); //Cancel Selected.
                 } else { tempBlock.transform.parent = gameManager.originalParent.transform; }
@@ -100,7 +100,7 @@ public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerE
                 gameManager.Selected = GetComponent<IMySelectable>();
                 tile.color = HighlightColor(tile.color);
                 isDragable = true;
-            } else { tile.color = originalColor; }
+            } else { tile.color = originalTileColor; }
         }
     }
 
