@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour,IPointerClickHandler {
     private IMySelectable selected;
-    public GameObject dragged;
+    public GameObject originalParent;
 
     public IMySelectable Selected {
         set {
