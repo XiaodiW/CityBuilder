@@ -1,3 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using Unity.Mathematics;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -7,30 +11,56 @@ public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerE
     private SpriteRenderer block;
     private GameManager gameManager;
     private SpriteRenderer highLight;
+    private Color originalColor;
 
     private void Start() {
         var tempArr = GetComponentsInChildren<SpriteRenderer>();
-        foreach(var temp in tempArr) {
-            if(temp.gameObject == this.gameObject) highLight = temp;
-        }
-        foreach(var temp in tempArr) {
-            if(temp.transform.parent == this.transform) block = temp;
-        }
+        foreach(var temp in tempArr)
+            if(temp.gameObject == gameObject)
+                highLight = temp;
+        foreach(var temp in tempArr)
+            if(temp.transform.parent == transform)
+                block = temp;
         highLight.enabled = false;
+        if(block != null) originalColor = block.color;
         gameManager = FindObjectOfType<GameManager>();
     }
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        if(block !=null) ChangeColor();
+
+    public void OnPointerClick(PointerEventData eventData) {
+        if(block != null) ChangeColor(true);
     }
-    
-    void ChangeColor() {
-        gameManager.Selected = GetComponent<IMySelectable>();
-        block.color = Color.black;
+
+    private void ChangeColor(bool isHighLight) {
+        if(isHighLight) {
+            gameManager.Selected = GetComponent<IMySelectable>();
+            block.color = HighlightColor(block.color);
+        } else { block.color = originalColor; }
     }
-    
+
+    private static Color HighlightColor(Color color) {
+        var newColor = color;
+        var colorDic = new Dictionary<string, float>();
+        colorDic.Add("r", newColor.r);
+        colorDic.Add("g", newColor.g);
+        colorDic.Add("b", newColor.b);
+        colorDic.Add("a", newColor.a);
+        var i = colorDic.Take(3).OrderBy(a => a.Value).Last().Key;
+        switch(i) {
+            case "r":
+                newColor.r = 1;
+                break;
+            case "g":
+                newColor.g = 1;
+                break;
+            case "b":
+                newColor.b = 1;
+                break;
+        }
+        return newColor;
+    }
+
     public void RemoveSelect() {
-        if(block !=null) block.color = Color.gray;
+        if(block !=null) ChangeColor(false);
     }
 
     public void OnPointerUp(PointerEventData eventData) {
@@ -67,6 +97,7 @@ public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerE
                 tempBlock.transform.parent = transform;
                 block = tempBlock;
                 wall.block = null;
+                this.originalColor = wall.originalColor;
             } else { tempBlock.transform.parent = gameManager.originalParent.transform; }
             tempBlock.transform.localPosition = Vector3.zero;
         }

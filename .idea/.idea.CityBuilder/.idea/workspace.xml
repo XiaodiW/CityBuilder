@@ -4,7 +4,6 @@
     <list default="true" id="4286c14d-7833-4be6-8f19-ea6cb4d035fc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Wall.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,9 +18,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/AutoSaver/Editor/AutoSaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FDDAEB0F-ECAB-444C-B7CD-B3CE9F53FEAD/2b/1eecc9a8/PlayModeStateChange.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B8BC167D-E93E-4CD7-ACB3-FCE533DC4CBC/89/bf7d698a/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/Wall.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/Wall.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5458C27C-C6FB-43A8-B421-44DFC5E4C430/ce/b771494b/IPointerUpHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FDDAEB0F-ECAB-444C-B7CD-B3CE9F53FEAD/11/cbdd7701/EditorApplication.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -77,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612365171139</updated>
-      <workItem from="1612365207674" duration="25574000" />
+      <workItem from="1612365207674" duration="29547000" />
     </task>
     <task id="LOCAL-00001" summary="Add AutoSaver, Implement wall color changed IPointClick">
       <created>1612378226939</created>
@@ -107,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612390648276</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implement Drag and drop fix bugs">
+      <created>1612429856925</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612429856926</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -129,6 +137,7 @@
     <MESSAGE value="Implement Click and unSelect function" />
     <MESSAGE value="Add IpointerEnter IpointerDown ...." />
     <MESSAGE value="Add Drag and drop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Drag and drop" />
+    <MESSAGE value="Implement Drag and drop fix bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Drag and drop fix bugs" />
   </component>
 </project>
