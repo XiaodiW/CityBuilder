@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b4cf91845d4fe5a679596aed278df1, type: 3}
   m_Name: Grey
   m_EditorClassIdentifier: 
-  color: {r: 0.54901963, g: 0.54901963, b: 0.55, a: 1}
+  originalColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
+  highLightColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}

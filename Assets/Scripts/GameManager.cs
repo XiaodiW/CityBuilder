@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour,IPointerClickHandler {
     private bool isSpawnOn;
     public Button modeButton;
     public GameObject prefab;
-    public List<BlockColors> PresetColors;
+    public List<TileColors> PresetColors;
     private GameObject isoMetricGrid;
     private Text modeButtonText;
     [HideInInspector] public bool targetCanSpawn;
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour,IPointerClickHandler {
             if(temp.transform.parent == instance.transform)
                 b = temp;
         var colorSelected = PresetColors[Random.Range(0, PresetColors.Count)];
-        b.color = colorSelected.color;
+        b.color = colorSelected.originalColor;
         b.gameObject.name = colorSelected.name;
     }
 }

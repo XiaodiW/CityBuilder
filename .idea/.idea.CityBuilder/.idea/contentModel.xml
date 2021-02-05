@@ -14,9 +14,12 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="BlockColors.cs" t="Include" />
+          <e p="Cell.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="IMySelectable.cs" t="Include" />
+          <e p="IsoGrid.cs" t="Include" />
+          <e p="tile.cs" t="Include" />
+          <e p="TileColors.cs" t="Include" />
           <e p="Wall.cs" t="Include" />
         </e>
       </e>
