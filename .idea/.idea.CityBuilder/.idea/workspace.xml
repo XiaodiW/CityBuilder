@@ -2,25 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4286c14d-7833-4be6-8f19-ea6cb4d035fc" name="Default Changelist" comment="two small updates">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Cell.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Cell.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IsoGrid.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IsoGrid.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/tile.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/BuildObject.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/BuildObject.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BuildObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BuildObject.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Wall.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Blue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Blue.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Green.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Green.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Grey.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Grey.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Red.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Red.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Yellow.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Yellow.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BlockColors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TileColors.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BlockColors.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TileColors.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Wall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IsoGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IsoGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +27,7 @@
     <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/Wall.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file:///Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/b4/d70a0589/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FDDAEB0F-ECAB-444C-B7CD-B3CE9F53FEAD/11/cbdd7701/EditorApplication.cs" root0="SKIP_HIGHLIGHTING" />
@@ -51,6 +44,7 @@
     <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/Wall.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/AutoSaver/Editor/AutoSaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/Wall.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/351E49E2-A5BF-4FD6-BEAB-B458CE2255F3/d4/e055e298/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -66,18 +60,22 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Tile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Grid.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/IsoGrid.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Wall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Cell.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/IsoGrid.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BuildObject.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nybEnRhFAwAHopa4MCMXB06Kt1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35040236" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
@@ -129,7 +127,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612365171139</updated>
       <workItem from="1612365207674" duration="39803000" />
-      <workItem from="1612448010547" duration="23505000" />
+      <workItem from="1612448010547" duration="36715000" />
     </task>
     <task id="LOCAL-00001" summary="Add AutoSaver, Implement wall color changed IPointClick">
       <created>1612378226939</created>
@@ -240,6 +238,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Add AutoSaver, Implement wall color changed IPointClick" />
     <MESSAGE value="Implement Click and unSelect function" />

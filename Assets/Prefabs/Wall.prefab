@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2054656488}
   - component: {fileID: 2054656489}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6188209865615620509}
   - component: {fileID: 6188209865615620511}
   - component: {fileID: 8283100928279780130}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6188209865615620499}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b6c4d4792a584b1ababfbce4561c06e, type: 3}
   m_Name: 
@@ -141,7 +141,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Size: {x: 1, y: 1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &6188209865615620511
 SpriteRenderer:
@@ -206,3 +206,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5d03a1858840f581a8cc1fad1ed793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildObject: {fileID: 0}
