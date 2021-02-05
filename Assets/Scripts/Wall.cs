@@ -61,7 +61,7 @@ public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerE
         gameManager.originalParent = gameObject; //Save the original parent in GameManager
         tileTrans.parent = null; //Put the dragged tile to root
         var v3 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        v3.z = -0.2f; //Set the dragged tile a bit close to camera.
+        v3.z = v3.y - 0.2f; //Set the dragged tile a bit close to camera. Since the Grid X Rotate 45o , y & z should be equal to each other.
         tileTrans.position = v3;
         tileTrans.localScale = new Vector3(1.5f, 1.5f, 1); //Enlarge tile during Dragging;
     }

@@ -47,9 +47,10 @@ public class GameManager : MonoBehaviour,IPointerClickHandler {
         var instance = Instantiate(prefab, isoMetricGrid.transform);
         instance.transform.position = mousePosition;
         var tempPos = instance.transform.localPosition;
-        tempPos.x = (float) Math.Round(tempPos.x);
+        /*tempPos.x = (float) Math.Round(tempPos.x);
         tempPos.y = (float) Math.Round(tempPos.y);
-        tempPos.z = 0;
+        tempPos.z = 0;*/
+        tempPos = Vector3Int.RoundToInt(tempPos);
         instance.transform.localPosition = tempPos;
         SpriteRenderer b = new SpriteRenderer();
         var tempArr = instance.GetComponentsInChildren<SpriteRenderer>();
