@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4286c14d-7833-4be6-8f19-ea6cb4d035fc" name="Default Changelist" comment="two small updates">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/BuildObject.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/BuildObject.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BuildObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BuildObject.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="4286c14d-7833-4be6-8f19-ea6cb4d035fc" name="Default Changelist" comment="Add Build Object and realted Drag&amp;Drop">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Wall.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/IsoGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IsoGrid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +120,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612365171139</updated>
       <workItem from="1612365207674" duration="39803000" />
-      <workItem from="1612448010547" duration="36715000" />
+      <workItem from="1612448010547" duration="45321000" />
     </task>
     <task id="LOCAL-00001" summary="Add AutoSaver, Implement wall color changed IPointClick">
       <created>1612378226939</created>
@@ -220,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612511555389</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add Build Object and realted Drag&amp;Drop">
+      <created>1612562439085</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1612562439086</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -252,7 +252,8 @@
     <MESSAGE value="Some Polish" />
     <MESSAGE value="Fix Bug (Drop to itself)&#10;add Comments&#10;Some Refactoring" />
     <MESSAGE value="two small updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="two small updates" />
+    <MESSAGE value="Add Build Object and realted Drag&amp;Drop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Build Object and realted Drag&amp;Drop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
