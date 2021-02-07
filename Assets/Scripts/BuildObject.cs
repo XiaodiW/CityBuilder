@@ -26,13 +26,13 @@ namespace DefaultNamespace {
             var v3 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             v3.z = v3.y+0.2f;
             transform.position = v3;
-            transform.localPosition = Vector3Int.RoundToInt(transform.localPosition);
             /*var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if(Physics.Raycast(ray, out var hit,LayerMask.GetMask("Ground"))) { //
+            if(Physics.Raycast(ray, out var hit)) {
                 var v3 =hit.point;
                 v3.z = v3.y+0.2f;
                 transform.position = v3;
             }*/
+            transform.localPosition = Vector3Int.RoundToInt(transform.localPosition);
         }
 
         public void OnEndDrag(PointerEventData eventData) {
