@@ -1,12 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 
 public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerEnterHandler
-    ,IPointerExitHandler,IDragHandler,IDropHandler,IDroppable,IPointerUpHandler {
+    ,IPointerExitHandler,IDragHandler,IDropHandler,IPointerUpHandler {
     public Tile tile;
     private SpriteRenderer tileRederer;
     private GameManager gameManager;
@@ -40,7 +39,7 @@ public class Wall : MonoBehaviour, IMySelectable ,IPointerClickHandler,IPointerE
         var target = eventData.pointerCurrentRaycast.gameObject;
         if(tileRederer != null) {
             var blockTransform = tileRederer.transform;
-            if(target.GetComponent<IDroppable>() == null) blockTransform.parent = transform;
+            blockTransform.parent = transform;
             blockTransform.localPosition = Vector3.zero;
             blockTransform.localScale = new Vector3(1, 1, 1);
             blockTransform.GetComponent<SpriteRenderer>().sortingOrder = 0; 
