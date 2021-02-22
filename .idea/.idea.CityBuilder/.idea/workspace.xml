@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4286c14d-7833-4be6-8f19-ea6cb4d035fc" name="Default Changelist" comment="Polish">
+    <list default="true" id="4286c14d-7833-4be6-8f19-ea6cb4d035fc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityBuilder/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Wall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,31 +18,20 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/c6/d1a404dd/TaskAwaiter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/BuildObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/b4/d70a0589/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FDDAEB0F-ECAB-444C-B7CD-B3CE9F53FEAD/11/cbdd7701/EditorApplication.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA976C21-0410-4B7C-A9E1-785715722C9D/01/86a43783/Socket.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/f8/76c80547/EventProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Prefabs/BuildObject.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FDDAEB0F-ECAB-444C-B7CD-B3CE9F53FEAD/2b/1eecc9a8/PlayModeStateChange.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B8BC167D-E93E-4CD7-ACB3-FCE533DC4CBC/89/bf7d698a/Color.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/Wall.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/351E49E2-A5BF-4FD6-BEAB-B458CE2255F3/d4/e055e298/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/Wall.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file:///Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/29122ACC-5360-46F3-B649-E0F67A901E87/a5/1139f61c/GUIUtility.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/BuildObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/f8/76c80547/EventProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DC46B4F9-A7AC-4F79-8C27-BAD670036E44/66/e964cfed/IMGUIContainer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FDDAEB0F-ECAB-444C-B7CD-B3CE9F53FEAD/2b/1eecc9a8/PlayModeStateChange.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DC46B4F9-A7AC-4F79-8C27-BAD670036E44/b5/942026e4/EventDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/EditorPluginInterop.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5458C27C-C6FB-43A8-B421-44DFC5E4C430/ce/b771494b/IPointerUpHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/BuildObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B8BC167D-E93E-4CD7-ACB3-FCE533DC4CBC/89/bf7d698a/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/AutoSaver/Editor/AutoSaver.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/xiaodi/Documents/Forsbergs/Projects/CityBuilder/Assets/Scripts/Wall.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/351E49E2-A5BF-4FD6-BEAB-B458CE2255F3/d4/e055e298/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -55,10 +47,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Tile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Grid.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Wall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Cell.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/IsoGrid.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BuildObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Wall.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nybEnRhFAwAHopa4MCMXB06Kt1" />
@@ -96,13 +88,13 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="16036">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="opaque">
         <Object />
       </option>
-      <option name="pid" value="16036" />
+      <option name="pid" />
       <option name="plain">
         <Object />
       </option>
@@ -122,7 +114,8 @@
       <option name="presentableId" value="Default" />
       <updated>1612365171139</updated>
       <workItem from="1612365207674" duration="39803000" />
-      <workItem from="1612448010547" duration="49748000" />
+      <workItem from="1612448010547" duration="52580000" />
+      <workItem from="1612777699754" duration="1643000" />
     </task>
     <task id="LOCAL-00001" summary="Add AutoSaver, Implement wall color changed IPointClick">
       <created>1612378226939</created>
@@ -243,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612707876305</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add Drag Object Transparent">
+      <created>1612711782006</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1612711782008</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -277,7 +277,8 @@
     <MESSAGE value="Solve all bug in Drag and drop BuildObejct" />
     <MESSAGE value="Some Polish" />
     <MESSAGE value="Polish" />
-    <option name="LAST_COMMIT_MESSAGE" value="Polish" />
+    <MESSAGE value="Add Drag Object Transparent" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Drag Object Transparent" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
